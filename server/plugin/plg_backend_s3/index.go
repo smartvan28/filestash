@@ -54,7 +54,7 @@ func (s S3Backend) Init(params map[string]string, app *App) (IBackend, error) {
 		creds = append(creds, &credentials.StaticProvider{Value: credentials.Value{
 			AccessKeyID:     params[os.Getenv("S3_CLIENT_ID")],
 			SecretAccessKey: params[os.Getenv("S3_SECRET_ID")],
-			SessionToken:    params["session_token"],
+			SessionToken:    params["session_token"]
 		}})
 	}
 
